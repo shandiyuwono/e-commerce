@@ -17,7 +17,8 @@ Routes| Method | Headers | Request Body | Response Description | Response Succes
 /product/:productId | PATCH | access_token (from admin) | { <br> &nbsp; "name": "example_product" <br> &nbsp;  "price": 89 <br> &nbsp;  "description": "example_description" <br>  &nbsp; "stock": 9 <br> } | updates single or multiple product values based on product id | res.status: 200, *product updated* | res.status: 400, *missing required parameters* <br><br> res.status: 401, *User unauthorized*
 /product/:productId | DELETE | access_token (from admin) | none | deletes a product from database based on product id | res.status: 200, *product successfully deleted* | res.status: 401, *User unauthorized*
 
-#Cart Routes
+# Cart Routes
+
 Routes| Method | Headers | Request Body | Response Description | Response Success | Response Error 
 ------|--------|---------|--------------|----------------------|------------------|-----------------
 /carts | GET | access_token | none | returns array of all cart data associated with logged in user | res.status: 200, <br> [<br> &nbsp;{ <br> &nbsp; &nbsp; _id: ObjectId(), <br> &nbsp; &nbsp; user: ObjectId(), <br> &nbsp; &nbsp; product: ObjectId() <br> &nbsp;} <br>] | res.status: 401, *User unauthorized*
