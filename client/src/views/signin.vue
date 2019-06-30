@@ -53,7 +53,7 @@ export default {
     signIn() {
       axios({
         method: 'POST',
-        url: 'http://localhost:3000/users/login',
+        url: `${this.$store.state.baseURL}/users/login`,
         data: {
           email: this.email,
           password: this.password

@@ -7,7 +7,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    baseURL: 'http://localhost:3000',
+    baseURL: 'http://gamegit-server.syuwono.com',
     productList: [],
     cartList: [],
     transactions: [],

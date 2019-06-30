@@ -97,7 +97,7 @@ export default {
     removeCart(id) {
       axios({
         method: 'DELETE',
-        url: `http://localhost:3000/carts/${id}`,
+        url: `${this.$store.state.baseURL}/carts/${id}`,
         headers: {
           access_token: localStorage.access_token
         }

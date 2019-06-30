@@ -95,7 +95,7 @@ export default {
     register() {
       axios({ 
         method: 'POST',
-        url: 'http://localhost:3000/users/register',
+        url: `${this.$store.state.baseURL}/users/register`,
         data: {
           firstName: this.firstName,
           lastName: this.lastName,
